@@ -1,0 +1,21 @@
+<table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; let i = index" [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.FirstName | capitalize }}</td>
+        <td>{{ employee.LastName | capitalize }}</td>
+        <td>{{ employee.Department }}</td>
+        <td>{{ employee.Salary | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
